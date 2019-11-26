@@ -1,0 +1,21 @@
+{
+    "name": "thal",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node --max-old-space-size=4096 src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@hackstudio/puppeteer-lambda-launcher": "^1.0.4",
+        "mysql2": "^2.0.1",
+        "puppeteer": "^2.0.0",
+        "sequelize": "^5.21.2"
+    },
+    "devDependencies": {
+        "pending-xhr-puppeteer": "^2.1.0"
+    }
+}
