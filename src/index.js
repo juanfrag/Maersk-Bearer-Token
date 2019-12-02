@@ -14,7 +14,7 @@ async function run() {
         //executablePath: 'google-chrome',
         userDataDir: './data',
         headless: true,
-        args: ['--no-zygote','--no-sandbox']
+        args: ['--no-zygote','--no-sandbox','--disable-gpu']
     });
     console.log('RUN');
     const page = await browser.newPage();
