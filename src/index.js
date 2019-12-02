@@ -4,15 +4,17 @@ const fs            = require('fs').promises;
 const ScraperToken  = require('./Models/ScraperToken.js');
 const http          = require("http");
 const util          = require("util");
+const path          = require("path");
 "use strict";
 
 async function run() {
 
     const browser = await puppeteer.launch({
-        executablePath: 'google-chrome',
+        executablePath: path.resolve(__dirname,'../node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
+        //executablePath: 'google-chrome',
         userDataDir: './data',
         headless: true,
-        //args: ['--no-sandbox', '--disable-setuid-sandbox']
+        args: ['--no-zygote','--no-sandbox']
     });
     console.log('RUN');
     const page = await browser.newPage();
@@ -82,6 +84,7 @@ async function extrae(data){
         response.end(util.inspect(data));
     }).listen(8000, "::1");*/
 
+    console.log('RUN 4');
     ScraperToken.update({
         token: data,
     }, {
@@ -89,7 +92,6 @@ async function extrae(data){
             name: 'maersk'
         }
     });
-    console.log('RUN 4');
 }
 
 function dbdata(){
