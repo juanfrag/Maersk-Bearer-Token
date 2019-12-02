@@ -11,7 +11,7 @@ async function run() {
     const browser = await puppeteer.launch({
         executablePath: 'google-chrome',
         userDataDir: './data',
-        headless: true,
+        headless: false,
         //args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     console.log('RUN');
