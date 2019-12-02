@@ -13,7 +13,7 @@ async function run() {
         executablePath: path.resolve(__dirname,'../node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
         //executablePath: 'google-chrome',
         userDataDir: './data',
-        headless: true,
+        headless: false,
         args: ['--no-zygote','--no-sandbox','--disable-gpu']
     });
     console.log('RUN');

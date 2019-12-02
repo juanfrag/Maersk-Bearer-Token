@@ -1,3 +1,5 @@
-2019/12/02-17:02:52.259 6b86 Reusing MANIFEST ./data/Default/Session Storage/MANIFEST-000001
-2019/12/02-17:02:52.259 6b86 Recovering log #4
-2019/12/02-17:02:52.260 6b86 Reusing old log ./data/Default/Session Storage/000004.log 
+2019/12/02-17:21:31.164 70b9 Reusing MANIFEST /var/www/html/Maersk-Bearer-Token/data/Default/Session Storage/MANIFEST-000001
+2019/12/02-17:21:31.164 70b9 Recovering log #4
+2019/12/02-17:21:31.165 70b9 Reusing old log /var/www/html/Maersk-Bearer-Token/data/Default/Session Storage/000004.log 
+2019/12/02-17:21:41.944 711e Level-0 table #7: started
+2019/12/02-17:21:41.947 711e Level-0 table #7: 32485 bytes OK
