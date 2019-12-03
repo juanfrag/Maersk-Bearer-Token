@@ -24,8 +24,7 @@ async function run() {
         userDataDir: './data',
         //slowMo: 100,
         headless: true,
-        ignoreHTTPSErrors: true,
-        timeout: 0
+        ignoreHTTPSErrors: true
     })
 
     /*const browser = await puppeteer.launch({
