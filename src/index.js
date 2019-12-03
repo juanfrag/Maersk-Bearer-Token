@@ -42,7 +42,7 @@ async function run() {
     });*/
     const page = await browser.newPage();
     await page.goto('https://www.maersk.com/portaluser/login');//, {waitUntil: ['domcontentloaded', 'networkidle0'], timeout: 0});
-    await page.setDefaultNavigationTimeout(0); 
+    await page.setDefaultNavigationTimeout(3000); 
     console.log(await page.content());
 
     const USERNAME_SELECTOR = '#usernameInput';
