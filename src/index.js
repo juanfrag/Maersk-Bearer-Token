@@ -1,4 +1,4 @@
-const puppeteer     = require('puppeteer');
+//const puppeteer     = require('puppeteer');
 const CREDS         = require('./creds');
 const fs            = require('fs').promises;
 const ScraperToken  = require('./Models/ScraperToken.js');
@@ -9,7 +9,22 @@ const path          = require("path");
 
 async function run() {
 
+    const puppeteer = require("puppeteer-extra");
+    const pluginStealth = require("puppeteer-extra-plugin-stealth");
+    await puppeteer.use(pluginStealth());
+    await puppeteer.use(
+        require("puppeteer-extra-plugin-anonymize-ua")({ makeWindows: true })
+    )
+    await puppeteer.use(require("puppeteer-extra-plugin-stealth")())
     const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox',
+               '-disable-gpu', '--disable-infobars'
+              ],
+        slowMo: 100,
+        ignoreHTTPSErrors: true
+    })
+
+    /*const browser = await puppeteer.launch({
         executablePath: path.resolve(__dirname,'../node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
         //executablePath: 'google-chrome',
         userDataDir: './data',
@@ -21,11 +36,11 @@ async function run() {
     await page.setViewport({
         width: 1024,
         height: 700,
-    });
+    });*/
+    const page = await browser.newPage();
+    await page.goto('https://www.maersk.com/portaluser/login');//, {waitUntil: ['domcontentloaded', 'networkidle0'], timeout: 0});
+    //await page.setDefaultNavigationTimeout(0); 
 
-    await page.setDefaultNavigationTimeout(0); 
-
-    await page.goto('https://www.maersk.com/portaluser/login', {waitUntil: ['domcontentloaded', 'networkidle0'], timeout: 0});
 
     const USERNAME_SELECTOR = '#usernameInput';
     const PASSWORD_SELECTOR = '#passwordInput';
