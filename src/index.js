@@ -24,7 +24,8 @@ async function run() {
         userDataDir: './data',
         //slowMo: 100,
         headless: true,
-        ignoreHTTPSErrors: true
+        ignoreHTTPSErrors: true,
+        timeout: 0
     })
 
     /*const browser = await puppeteer.launch({
@@ -42,7 +43,7 @@ async function run() {
     });*/
     const page = await browser.newPage();
     await page.goto('https://www.maersk.com/portaluser/login');//, {waitUntil: ['domcontentloaded', 'networkidle0'], timeout: 0});
-    await page.setDefaultNavigationTimeout(3000); 
+    await page.setDefaultNavigationTimeout(0); 
     console.log(await page.content());
 
     const USERNAME_SELECTOR = '#usernameInput';
