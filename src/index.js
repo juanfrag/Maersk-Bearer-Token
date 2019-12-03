@@ -57,6 +57,7 @@ async function run() {
     //console.log(CREDS.username);
     //console.log(CREDS.password);
     //await page.screenshot({ path: 'screenshots/github.png' });
+    console.log('RUN 1');
     const BUTTON_SELECTOR = '#login-form > fieldset > div:nth-child(4) > button';
     await page.click(BUTTON_SELECTOR);
     await page.waitForNavigation();
