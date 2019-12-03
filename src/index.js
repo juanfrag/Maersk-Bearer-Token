@@ -23,7 +23,7 @@ async function run() {
               ],
         userDataDir: './data',
         slowMo: 100,
-        headless: true,
+        headless: false,
         ignoreHTTPSErrors: true,
         timeout: 0
     })
