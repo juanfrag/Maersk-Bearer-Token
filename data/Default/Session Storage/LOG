@@ -1,3 +1,6 @@
-2019/12/03-11:49:33.850 2b2b Reusing MANIFEST Session Storage/MANIFEST-000001
-2019/12/03-11:49:33.851 2b2b Recovering log #4
-2019/12/03-11:49:33.851 2b2b Reusing old log Session Storage/000004.log 
+2019/12/03-12:39:26.804 317d Reusing MANIFEST Session Storage/MANIFEST-000001
+2019/12/03-12:39:26.805 317d Recovering log #4
+2019/12/03-12:39:26.806 317d Reusing old log Session Storage/000004.log 
+2019/12/03-12:39:34.235 31a8 Level-0 table #8: started
+2019/12/03-12:39:34.238 31a8 Level-0 table #8: 32932 bytes OK
+2019/12/03-12:39:34.241 31a8 Delete type=0 #4
