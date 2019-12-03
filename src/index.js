@@ -17,11 +17,14 @@ async function run() {
     )
     await puppeteer.use(require("puppeteer-extra-plugin-stealth")())
     const browser = await puppeteer.launch({
+        executablePath:'google-chrome-stable',
         args: ['--no-sandbox', '--disable-setuid-sandbox',
                '-disable-gpu', '--disable-infobars'
               ],
         slowMo: 100,
-        ignoreHTTPSErrors: true
+        headless: true,
+        ignoreHTTPSErrors: true,
+        timeout: 0
     })
 
     /*const browser = await puppeteer.launch({
@@ -41,7 +44,7 @@ async function run() {
     await page.goto('https://www.maersk.com/portaluser/login');//, {waitUntil: ['domcontentloaded', 'networkidle0'], timeout: 0});
     //await page.setDefaultNavigationTimeout(0); 
     console.log(await page.content());
-    await page.waitFor(5000);
+    await page.waitFor(3000);
 
     const USERNAME_SELECTOR = '#usernameInput';
     const PASSWORD_SELECTOR = '#passwordInput';
