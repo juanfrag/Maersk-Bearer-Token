@@ -2,8 +2,8 @@
    "0XHS+kQqIhFIeN7oymyiPVv7XJFRlvKgxEhdmnxDlR0=": {
       "expect_ct": {
          "expect_ct_enforce": false,
-         "expect_ct_expiry": 1575386086.465295,
-         "expect_ct_observed": 1575299686.465295,
+         "expect_ct_expiry": 1575473484.63527,
+         "expect_ct_observed": 1575387084.63527,
          "expect_ct_report_uri": "https://a.forcesslreports.com/Expect-CT-report/nullm"
       },
       "expiry": 0.0,
@@ -30,9 +30,9 @@
       "sts_observed": 1575299656.115384
    },
    "iz4OznKRw2EZToxGGpnmfumiT4Qve89mXCOoy0Zzzqo=": {
-      "expiry": 1575322300.154577,
+      "expiry": 1575387683.092626,
       "mode": "force-https",
       "sts_include_subdomains": true,
-      "sts_observed": 1575321700.15458
+      "sts_observed": 1575387083.092631
    }
 }

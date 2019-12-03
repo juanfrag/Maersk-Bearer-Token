@@ -21,8 +21,9 @@ async function run() {
         args: ['--no-sandbox', '--disable-setuid-sandbox',
                '-disable-gpu', '--disable-infobars'
               ],
+        userDataDir: './data',
         slowMo: 100,
-        headless: true,
+        headless: false,
         ignoreHTTPSErrors: true,
         timeout: 0
     })
@@ -44,7 +45,6 @@ async function run() {
     await page.goto('https://www.maersk.com/portaluser/login');//, {waitUntil: ['domcontentloaded', 'networkidle0'], timeout: 0});
     //await page.setDefaultNavigationTimeout(0); 
     console.log(await page.content());
-    await page.waitFor(3000);
 
     const USERNAME_SELECTOR = '#usernameInput';
     const PASSWORD_SELECTOR = '#passwordInput';
