@@ -1,3 +1,5 @@
-2019/12/03-12:49:49.631 326e Reusing MANIFEST Session Storage/MANIFEST-000001
-2019/12/03-12:49:49.632 326e Recovering log #7
-2019/12/03-12:49:49.632 326e Reusing old log Session Storage/000007.log 
+2020/01/06-11:08:13.937 28e7 Reusing MANIFEST ./data/Default/Session Storage/MANIFEST-000001
+2020/01/06-11:08:13.938 28e7 Recovering log #3
+2020/01/06-11:08:13.938 28e7 Level-0 table #3: started
+2020/01/06-11:08:13.981 28e7 Level-0 table #3: 32506 bytes OK
+2020/01/06-11:08:14.007 28e7 Delete type=0 #3

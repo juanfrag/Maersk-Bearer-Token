@@ -17,7 +17,7 @@ async function run() {
     )
     await puppeteer.use(require("puppeteer-extra-plugin-stealth")())
     const browser = await puppeteer.launch({
-        executablePath:'google-chrome-stable',
+        //executablePath:'google-chrome-stable',
         args: ['--no-sandbox', '--disable-setuid-sandbox',
                '-disable-gpu', '--disable-infobars'
               ],
@@ -58,7 +58,8 @@ async function run() {
     //console.log(CREDS.password);
     //await page.screenshot({ path: 'screenshots/github.png' });
     console.log('RUN 1');
-    const BUTTON_SELECTOR = '#login-form > fieldset > div:nth-child(4) > button';
+    //const BUTTON_SELECTOR = '#login-form > fieldset > div:nth-child(4) > button';
+    const BUTTON_SELECTOR = '#login-form > div:nth-child(4) > button';
     await page.click(BUTTON_SELECTOR);
     await page.waitForNavigation();
     console.log('RUN 2');
