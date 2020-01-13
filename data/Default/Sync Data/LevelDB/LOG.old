@@ -1,1 +1,3 @@
-2020/01/06-11:05:48.912 271f Reusing MANIFEST /var/www/html/Maersk-Bearer-Token/data/Default/Sync Data/LevelDB/MANIFEST-000001
+2020/01/13-15:09:59.308 4d91 Reusing MANIFEST /var/www/html/Maersk-Bearer-Token/data/Default/Sync Data/LevelDB/MANIFEST-000001
+2020/01/13-15:09:59.308 4d91 Recovering log #3
+2020/01/13-15:09:59.308 4d91 Reusing old log /var/www/html/Maersk-Bearer-Token/data/Default/Sync Data/LevelDB/000003.log 

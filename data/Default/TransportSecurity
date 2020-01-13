@@ -1,26 +1,44 @@
 {
-   "0XHS+kQqIhFIeN7oymyiPVv7XJFRlvKgxEhdmnxDlR0=": {
-      "expect_ct": {
-         "expect_ct_enforce": false,
-         "expect_ct_expiry": 1578409594.793912,
-         "expect_ct_observed": 1578323194.793912,
-         "expect_ct_report_uri": "https://a.forcesslreports.com/Expect-CT-report/nullm"
-      },
-      "expiry": 0.0,
-      "mode": "default",
+   "5EdUoB7YUY9zZV+2DkgVXgho8WUvp+D+6KpeUOhNQIM=": {
+      "expiry": 1610477962.54374,
+      "mode": "force-https",
       "sts_include_subdomains": false,
-      "sts_observed": 0.0
+      "sts_observed": 1578941962.543744
    },
    "8/RrMmQlCD2Gsp14wUCE1P8r7B2C5+yE0+g79IPyRsc=": {
-      "expiry": 1609859149.723438,
+      "expiry": 1610478009.754864,
       "mode": "force-https",
       "sts_include_subdomains": false,
-      "sts_observed": 1578323149.72344
+      "sts_observed": 1578942009.754867
    },
-   "iz4OznKRw2EZToxGGpnmfumiT4Qve89mXCOoy0Zzzqo=": {
-      "expiry": 1578323794.123784,
+   "LAZkYS46RVRcFiZAzmUJrz6TJHBd4nwE6VxPWfPLYHs=": {
+      "expiry": 1589829001.504815,
       "mode": "force-https",
       "sts_include_subdomains": true,
-      "sts_observed": 1578323194.123788
+      "sts_observed": 1578942601.504819
+   },
+   "eKKvq/Wfe6JfqLYZ9CEZhuktzG9OcKY3AREd9NcihIs=": {
+      "expiry": 1610477970.146809,
+      "mode": "force-https",
+      "sts_include_subdomains": false,
+      "sts_observed": 1578941970.146812
+   },
+   "fJjUrPqhktMfiTHJX3Q0pJi/P12Q72DBgzzJqjlNC4o=": {
+      "expiry": 1589827266.417515,
+      "mode": "force-https",
+      "sts_include_subdomains": true,
+      "sts_observed": 1578940866.417519
+   },
+   "iz4OznKRw2EZToxGGpnmfumiT4Qve89mXCOoy0Zzzqo=": {
+      "expiry": 1578943335.439065,
+      "mode": "force-https",
+      "sts_include_subdomains": true,
+      "sts_observed": 1578942735.439069
+   },
+   "tXjOdUMSBgtiUbrbGkl6XP80fiDB8uXOkUbnCf0IKvw=": {
+      "expiry": 1581533020.451391,
+      "mode": "force-https",
+      "sts_include_subdomains": false,
+      "sts_observed": 1578941020.451394
    }
 }
