@@ -1,3 +1,6 @@
-2020/01/13-15:10:00.577 4d8e Reusing MANIFEST /var/www/html/Maersk-Bearer-Token/data/Default/Local Storage/leveldb/MANIFEST-000001
-2020/01/13-15:10:00.577 4d8e Recovering log #7
-2020/01/13-15:10:00.577 4d8e Reusing old log /var/www/html/Maersk-Bearer-Token/data/Default/Local Storage/leveldb/000007.log 
+2020/01/13-16:08:30.073 5284 Reusing MANIFEST /var/www/html/Maersk-Bearer-Token/data/Default/Local Storage/leveldb/MANIFEST-000001
+2020/01/13-16:08:30.073 5284 Recovering log #7
+2020/01/13-16:08:30.073 5284 Reusing old log /var/www/html/Maersk-Bearer-Token/data/Default/Local Storage/leveldb/000007.log 
+2020/01/13-16:08:42.923 52de Level-0 table #11: started
+2020/01/13-16:08:42.958 52de Level-0 table #11: 29041 bytes OK
+2020/01/13-16:08:42.988 52de Delete type=0 #7

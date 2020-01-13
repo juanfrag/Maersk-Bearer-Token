@@ -81,16 +81,18 @@ async function run() {
 		});
 		delay(2000);
 
-		console.log(i);
+		console.log('Reintento '+i);
 		if(bandera == true){
 			i = 2;
-			//break;
 		} else {
 			//page.reload({waitUntil: 'load'});
 		}
 	}
 	await delay(3000);
 	console.log('RUN 3');
+	if(bandera != true){
+		console.log('FALLA FIN');
+	}
 	console.log(bearer_enc2);
 	extrae(bearer_enc2);
 	await page.waitFor(2000);
