@@ -1,3 +1,7 @@
-2020/01/13-16:08:29.285 5285 Reusing MANIFEST /var/www/html/Maersk-Bearer-Token/data/Default/Session Storage/MANIFEST-000001
-2020/01/13-16:08:29.286 5285 Recovering log #23
-2020/01/13-16:08:29.286 5285 Reusing old log /var/www/html/Maersk-Bearer-Token/data/Default/Session Storage/000023.log 
+2020/01/14-10:10:56.357 1d6a Reusing MANIFEST /var/www/html/Maersk-Bearer-Token/data/Default/Session Storage/MANIFEST-000001
+2020/01/14-10:10:56.357 1d6a Recovering log #26
+2020/01/14-10:10:56.357 1d6a Level-0 table #29: started
+2020/01/14-10:10:56.422 1d6a Level-0 table #29: 32752 bytes OK
+2020/01/14-10:10:56.422 1d6a Recovering log #29
+2020/01/14-10:10:56.422 1d6a Reusing old log /var/www/html/Maersk-Bearer-Token/data/Default/Session Storage/000029.log 
+2020/01/14-10:10:56.489 1d6a Delete type=0 #26

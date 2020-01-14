@@ -5,8 +5,10 @@ const ScraperToken  = require('./Models/ScraperToken.js');
 const http          = require("http");
 const util          = require("util");
 const path          = require("path");
-"use strict";
+var Slack 			= require('slack-node');
 
+"use strict";
+webhookUri = "https://hooks.slack.com/services/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";
 async function run() {
 
 	const puppeteer = require("puppeteer-extra");
@@ -23,7 +25,7 @@ async function run() {
 			  ],
 		userDataDir: './data',
 		//slowMo: 100,
-		headless: false,
+		headless: true,
 		ignoreHTTPSErrors: true,
 		timeout: 0
 	})
@@ -51,10 +53,9 @@ async function run() {
 	console.log('RUN 2');
 	let bandera = false;
 	let bearer_enc2 = '';
-	for(var i = 0; i < 2;i++){
+	for(var i = 0; i < 3;i++){
 		delay(3000);
 		let response = await page.goto('https://www.maersk.com/instantPrice/', {waitUntil: 'load'});
-		bandera = false;
 		page.on('response', response => {
 			//console.log('Response Request:', response.request());
 			let req = response.request();
@@ -83,17 +84,27 @@ async function run() {
 
 		console.log('Reintento '+i);
 		if(bandera == true){
-			i = 2;
+			i = 4;
 		} else {
 			//page.reload({waitUntil: 'load'});
 		}
 	}
 	await delay(3000);
 	console.log('RUN 3');
-	if(bandera != true){
+	if(bandera == false){
 		console.log('FALLA FIN');
+		slack = new Slack();
+		slack.setWebhook(webhookUri);
+		let date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+		slack.webhook({
+			channel: "#cookies",
+			username: "Maersk-Puppeteer",
+			text: "Fallo obtencion de token Maersk. "+date
+		}, function(err, response) {
+			console.log(response);
+		});
 	}
-	console.log(bearer_enc2);
+	//console.log(bearer_enc2);
 	extrae(bearer_enc2);
 	await page.waitFor(2000);
 	await page.goto(`https://www.maersk.com/logoff`);
@@ -102,14 +113,12 @@ async function run() {
 }
 
 async function extrae(data){
-	/*http.createServer((request, response) => {
-        response.setHeader("Content-Type", "text/plain;charset=utf-8");
-        response.end(util.inspect(data));
-    }).listen(8000, "::1");*/
+	let date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
 
 	console.log('RUN 4');
 	ScraperToken.update({
 		token: data,
+		date: date
 	}, {
 		where: {
 			name: 'maersk'
@@ -122,7 +131,6 @@ function delay(timeout) {
 		setTimeout(resolve, timeout);
 	});
 }
-
 
 function dbdata(){
 	ScraperToken.findAll({

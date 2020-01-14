@@ -17,6 +17,10 @@ module.exports = db.sequelize.define(
         token: {
             type: Sequelize.STRING,
             allowNull: false
+        },
+		date: {
+            type: Sequelize.STRING,
+            allowNull: true
         }
         //created_at: Sequelize.DATE,
         //updated_at: Sequelize.DATE,
