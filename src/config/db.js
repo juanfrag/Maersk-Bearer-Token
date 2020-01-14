@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 db = {}
 // Option 1: Passing parameters separately
-const sequelize = new Sequelize('cargofive', 'root', '123', {
-    host: 'localhost',
+const sequelize = new Sequelize('ebdb', 'cargofive', 'C4rg05.2018#*', {
+    host: 'cfive-dev.cjmsjfgiwnzb.eu-central-1.rds.amazonaws.com',
     dialect: 'mysql',
 
     pool: {
