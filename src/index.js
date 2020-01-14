@@ -19,7 +19,7 @@ async function run() {
 	)
 	await puppeteer.use(require("puppeteer-extra-plugin-stealth")())
 	const browser = await puppeteer.launch({
-		//executablePath:'google-chrome-stable',
+		executablePath:'google-chrome-stable',
 		args: ['--no-sandbox', '--disable-setuid-sandbox',
 			   '-disable-gpu', '--disable-infobars'
 			  ],
