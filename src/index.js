@@ -23,8 +23,8 @@ async function run() {
 		args: ['--no-sandbox', '--disable-setuid-sandbox',
 			   '-disable-gpu', '--disable-infobars'
 			  ],
-		//userDataDir: './data',
-		//slowMo: 100,
+		userDataDir: './data',
+		slowMo: 100,
 		headless: true,
 		ignoreHTTPSErrors: true,
 		timeout: 0
