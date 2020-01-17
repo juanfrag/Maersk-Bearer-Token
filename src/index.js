@@ -19,12 +19,12 @@ async function run() {
 	)
 	await puppeteer.use(require("puppeteer-extra-plugin-stealth")())
 	const browser = await puppeteer.launch({
-		//executablePath:'google-chrome-stable',
+		executablePath:'google-chrome-stable',
 		args: ['--no-sandbox', '--disable-setuid-sandbox',
 			   '-disable-gpu', '--disable-infobars'
 			  ],
 		//userDataDir: './data',
-		slowMo: 100,
+		//slowMo: 100,
 		headless: true,
 		ignoreHTTPSErrors: true,
 		timeout: 0
@@ -47,8 +47,11 @@ async function run() {
 	//await page.screenshot({ path: 'screenshots/github.png' });
 	console.log('RUN 1');
 	//const BUTTON_SELECTOR = '#login-form > fieldset > div:nth-child(4) > button';
+  
 	const BUTTON_SELECTOR = '#login-form > div:nth-child(4) > button';
-	await page.click(BUTTON_SELECTOR);
+  
+  await page.$eval('#login-form > div:nth-child(4) > button', elem => elem.click()); // works
+	//await page.click(BUTTON_SELECTOR);
 	await page.waitForNavigation();
 	console.log('RUN 2');
 	let bandera = false;
