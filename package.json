@@ -16,6 +16,7 @@
         "puppeteer-extra": "^3.1.6",
         "puppeteer-extra-plugin-anonymize-ua": "^2.2.8",
         "puppeteer-extra-plugin-stealth": "^2.3.2",
+        "puppeteer-lambda": "^1.1.3",
         "sequelize": "^5.21.2",
         "slack-node": "^0.1.8"
     },

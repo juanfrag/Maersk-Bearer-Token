@@ -11,24 +11,34 @@ var Slack 			= require('slack-node');
 webhookUri = "https://hooks.slack.com/services/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";
 async function run() {
 
-	const puppeteer = require("puppeteer-extra");
+/*	const puppeteer = require("puppeteer-extra");
 	const pluginStealth = require("puppeteer-extra-plugin-stealth");
 	await puppeteer.use(pluginStealth());
 	await puppeteer.use(
 		require("puppeteer-extra-plugin-anonymize-ua")({ makeWindows: true })
 	)
-	await puppeteer.use(require("puppeteer-extra-plugin-stealth")())
-	const browser = await puppeteer.launch({
+	await puppeteer.use(require("puppeteer-extra-plugin-stealth")())*/
+const puppeteerLambda = require('puppeteer-lambda');
+    const browser = await puppeteerLambda.getBrowser({
+    headless: true,
+	args: ['--no-sandbox', '--disable-setuid-sandbox',
+                           '-disable-gpu', '--disable-infobars',
+'--disable-background-timer-throttling',
+  '--disable-backgrounding-occluded-windows',
+  '--disable-renderer-backgrounding'
+                          ],
+    });
+/*	 browser = await puppeteer.launch({
 		executablePath:'google-chrome-stable',
 		args: ['--no-sandbox', '--disable-setuid-sandbox',
 			   '-disable-gpu', '--disable-infobars'
 			  ],
 		//userDataDir: './data',
-		//slowMo: 100,
+		slowMo: 200,
 		headless: true,
 		ignoreHTTPSErrors: true,
 		timeout: 0
-	})
+	})*/
 
 	const page = await browser.newPage();
 	await page.goto('https://www.maersk.com/portaluser/login',{waitUntil: ['domcontentloaded', 'networkidle0'], timeout: 0});
@@ -50,7 +60,9 @@ async function run() {
 
 	const BUTTON_SELECTOR = '#login-form > div:nth-child(4) > button';
 
-	await page.$eval('#login-form > div:nth-child(4) > button', elem => elem.click()); // works
+//	await page.$eval('#login-form > div:nth-child(4) > button', elem => elem.click()); // works
+//	await page.$eval('#login-form > div:nth-child(4) > button', elem => elem.click());
+	await page.$eval('#login-form > div:nth-child(4) > button', elem => elem.click());
 	//await page.click(BUTTON_SELECTOR);
 	await page.waitForNavigation();
 	console.log('RUN 2');
@@ -72,7 +84,7 @@ async function run() {
 						let inicio      = headerPage.indexOf('Bearer');
 						let fin         = headerPage.length;
 						let bearer_enc  = headerPage.substring(inicio,fin-2);
-						//console.log(bearer_enc);
+						console.log(bearer_enc);
 						//extrae(bearer_enc);
 						bearer_enc2 = bearer_enc;
 						bandera = true;
