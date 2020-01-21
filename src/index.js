@@ -47,10 +47,10 @@ async function run() {
 	//await page.screenshot({ path: 'screenshots/github.png' });
 	console.log('RUN 1');
 	//const BUTTON_SELECTOR = '#login-form > fieldset > div:nth-child(4) > button';
-  
+
 	const BUTTON_SELECTOR = '#login-form > div:nth-child(4) > button';
-  
-  await page.$eval('#login-form > div:nth-child(4) > button', elem => elem.click()); // works
+
+	await page.$eval('#login-form > div:nth-child(4) > button', elem => elem.click()); // works
 	//await page.click(BUTTON_SELECTOR);
 	await page.waitForNavigation();
 	console.log('RUN 2');
@@ -106,9 +106,10 @@ async function run() {
 		}, function(err, response) {
 			console.log(response);
 		});
+	} else {
+		extrae(bearer_enc2);
 	}
-	//console.log(bearer_enc2);
-	extrae(bearer_enc2);
+	console.log(bearer_enc2);
 	await page.waitFor(2000);
 	await page.goto(`https://www.maersk.com/logoff`);
 	await page.close();
